@@ -1,24 +1,83 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .app {
-    width: 100%;
-    margin: auto;
-    padding: 1rem;
-    border: 2px solid black;
-    width: 100%;
-    position: fixed;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .border{
-    border: 2px solid black;
-    padding: 25px;
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-  }
-  
+.chat-window {
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+}
+
+.chat-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.message.user {
+  background-color: #dcf8c6; /* Light green for user */
+  align-self: flex-end; /* Align user message to the right */
+}
+
+.message.bot {
+  background-color: #f1f1f1; /* Light gray for bot */
+  align-self: flex-start; /* Align bot message to the left */
+}
+
+.chat-footer {
+  display: flex;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 5px;
+}
+
+.chat-footer button {
+  padding: 5px;
+}
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  padding: 10px;
+}
+
+.loading-text {
+  font-weight: bold;
+}
+
+.loader::after {
+  content: '';
+  display: inline-block;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

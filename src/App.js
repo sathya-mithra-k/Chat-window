@@ -1,15 +1,14 @@
 import React from 'react';
-import Title from './Title';
-import SendingMessage from './SendingMessage';
+import ChatWindow from './ChatWindow';
 
 class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <SendingMessage />
+        <ChatWindow />
       </div>
     );
   }
 }
 
-export default App; 
+export default App;
