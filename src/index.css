@@ -1,45 +1,54 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .chat-window {
-  border: 2px solid black;
+  border: 3px solid black;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: 20px;
+  /*bottom: 10px;*/
 }
 
 .chat-header {
-  background-color: #f1f1f1;
-  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 3px solid #9e9e9e;
+
 }
 
 .chat-body {
+  background-color: #fafafa;
   flex: 1;
   padding: 10px;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  /*overflow-y: auto;*/
 }
 
 .message {
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 8px;
-  max-width: 70%;
+  padding: 15px;
+  margin: 5px ;
+  border-radius: 10px;
 }
 
 .message.user {
-  background-color: #dcf8c6; /* Light green for user */
-  align-self: flex-end; /* Align user message to the right */
-}
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  background-color: #ffffff; 
+  align-self: flex-end;
+  border: 2px solid #9e9e9e;
+ }
 
 .message.bot {
-  background-color: #f1f1f1; /* Light gray for bot */
-  align-self: flex-start; /* Align bot message to the left */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  color: #ffffff;
+  background-color: #a45bcb; 
+  align-self: flex-start; 
+ 
 }
 
 .chat-footer {
@@ -49,10 +58,16 @@ body {
 .chat-footer input {
   flex: 1;
   padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #9e9e9e;
 }
 
 .chat-footer button {
   padding: 5px;
+  border: 2px solid #9e9e9e;
+  color: #ffffff;
+  border-radius: 10px;
+  background-color:#a45bcb;
 }
 
 .loader {

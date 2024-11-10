@@ -24,7 +24,7 @@ class ChatWindow extends React.Component {
     }));
 
     setTimeout(() => {
-      const responseMessage = { text: 'This is a mock response!', sender: 'bot' };
+      const responseMessage = { text: 'This is a dummy response!', sender: 'bot' };
       this.setState(prevState => ({
         messages: [...prevState.messages, responseMessage],
         loading: false
