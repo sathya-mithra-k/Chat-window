@@ -5,10 +5,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <ChatWindow />
-      </div>
+        <ChatWindow /></div>
     );
   }
 }
-
 export default App;

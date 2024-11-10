@@ -7,11 +7,9 @@ function ChatFooter({ userInput, handleInputChange, sendMessage }) {
         type="text" 
         value={userInput} 
         onChange={handleInputChange} 
-        placeholder="Enter your message here" 
-      />
+        placeholder="Enter your message here"></input> 
       <button onClick={sendMessage}>Send</button>
     </div>
   );
 }
-
 export default ChatFooter;
